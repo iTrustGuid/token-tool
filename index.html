@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>token工具</title>
+    <script type="text/javascript" src="jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="clipboard.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="zui.min.css">
+</head>
+
+<body style="padding:50px">
+    <form>
+        <fieldset>
+            <legend>登录信息</legend>
+            <div class="form-group">
+                <label for="exampleInputAccount3">单点登录地址</label>
+                <input type="text" class="form-control" id="ssoServer" placeholder="http://192.168.5.222:8189/gm-sso-server" value="http://192.168.5.222:8189/gm-sso-server">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputAccount3">用户名</label>
+                <input type="text" class="form-control" id="userName" value="gs">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputAccount3">密码</label>
+                <input type="text" class="form-control" id="passWord" value="gs">
+            </div>
+            <button type="button" class="btn" id="getToken">获取token</button>
+        </fieldset>
+        <fieldset style="margin-top:50px;">
+            <legend>token值</legend>
+            <button type="button" class="btn" id="copyToken" data-clipboard-target="#tokenText">复制token</button>
+            <div class="form-group">
+                <input type="text" class="form-control" id="tokenText" readonly="readonly">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
